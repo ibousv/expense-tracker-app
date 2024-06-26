@@ -46,9 +46,14 @@ class _MyHomePageState extends State<MyHomePage> {
     body: Column(
       children: [
         SizedBox(
-          child: Image.asset('img1.jpg'),
+          child: Image.asset('assets/images/img1.jpg'),
         ),
-        SizedBox(),
+        const SizedBox(
+          child: Text("Manage your finance easily ",
+                  style: TextStyle(fontSize: 20,color: Colors.white),
+                  textAlign: TextAlign.center,),
+          
+        ),
         SizedBox()
       ],
     )
