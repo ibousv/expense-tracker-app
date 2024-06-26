@@ -41,11 +41,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
     backgroundColor: Colors.black,
     body: Column(
       children: [
-        SizedBox(),
+        SizedBox(
+          child: Image.asset('img1.jpg'),
+        ),
         SizedBox(),
         SizedBox()
       ],
