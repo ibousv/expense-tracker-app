@@ -1,5 +1,7 @@
 {
-  "image":"dart",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "features": {
     "ghcr.io/jarrodcolburn/features/flutter-sdk:0": {}
   },
