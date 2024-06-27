@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:device_sim/device_sim.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const App());
@@ -19,10 +20,13 @@ class HomeState extends State<App> {
         isEnabled: true,
         devices: const [iphone13ProMax],
         builder: (context) {
-          return const MaterialApp(
+          return const GetMaterialApp(
             title: 'Expense Tracker app',
-            home: MyHomePage(),
+            initialRoute: '/onboarding',
             debugShowCheckedModeBanner: false,
+            getPages: [
+              
+            ],
           );
         });
   }
@@ -39,59 +43,55 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
-        body: Column(
-          children: [
+      backgroundColor: Colors.black,
+      body: Column(
+        children: [
+          // Image
+          SizedBox(
+            child: Image.asset('assets/images/img1.jpg'),
+          ),
 
-            // Image
-            SizedBox(
-              child: Image.asset('assets/images/img1.jpg'),
+          // second section
+          const SizedBox(
+            height: 160,
+            child: Text(
+              "Manage your finance easily ",
+              style: TextStyle(
+                  fontSize: 50,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
             ),
+          ),
 
-            // second section
-            const SizedBox(
-              height: 160,
-              child: Text(
-                "Manage your finance easily ",
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
+          //Third section
+          const SizedBox(
+            height: 110,
+            child: Text(
+              "The best application for managing your finances,track all transactions, add ones",
+              style: TextStyle(
+                  color: Colors.grey, fontSize: 15, fontFamily: "Poppins"),
+              textAlign: TextAlign.center,
             ),
+          ),
 
-            //Third section
-            const SizedBox(
-              height: 110,
-              child: Text(
-                "The best application for managing your finances,track all transactions, add ones",
-                style: TextStyle(color: Colors.grey, fontSize: 15,fontFamily: "Poppins"),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            
-            //Last section
-            SizedBox(
-                width: 220,
-                height: 70,
-                child: TextButton(
-                    onPressed: clickStart,
-                    style: TextButton.styleFrom(
-                        foregroundColor: Colors.black,
-                        backgroundColor: Colors.white),
-                    child: const Text(
-                      "Start",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    )))
-                    
-          ],
-        ));
+          //Last section
+          SizedBox(
+              width: 220,
+              height: 70,
+              child: TextButton(
+                  onPressed: clickStart,
+                  style: TextButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      backgroundColor: Colors.white),
+                  child: const Text(
+                    "Start",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ))),
+        ],
+      ),
+    );
   }
 
-  void clickStart(){
-
-  }
-  
+  void clickStart() {}
 }
