@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:device_sim/device_sim.dart';
 import 'package:get/get.dart';
+import 'package:get/route_manager.dart';
+
+import 'splash_screen/splash_screen_view.dart';
 
 void main() {
   runApp(const App());
@@ -20,12 +23,13 @@ class HomeState extends State<App> {
         isEnabled: true,
         devices: const [iphone13ProMax],
         builder: (context) {
-          return const GetMaterialApp(
+          return GetMaterialApp(
             title: 'Expense Tracker app',
-            initialRoute: '/onboarding',
+            initialRoute: './onboarding',
             debugShowCheckedModeBanner: false,
             getPages: [
-              
+              GetPage(name: "/onboarding", page: () => const MyHomePage()),
+              GetPage(name: "/splash_screen", page: () => const SplashScreen())
             ],
           );
         });
