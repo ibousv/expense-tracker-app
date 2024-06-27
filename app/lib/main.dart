@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Image.asset('assets/images/img1.jpg'),
             ),
             const SizedBox(
-              height: 50,
+              height: 160,
               child: Text(
                 "Manage your finance easily ",
                 style: TextStyle(
@@ -59,10 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             const SizedBox(
-              height: 100,
+              height: 110,
               child: Text(
-                "The best application for managing your finances,track all transactionss, add all transactions, add ones",
-                style: TextStyle(color: Colors.grey, fontSize: 10),
+                "The best application for managing your finances,track all transactions, add ones",
+                style: TextStyle(color: Colors.grey, fontSize: 15),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -73,7 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {},
                     style: TextButton.styleFrom(
                         foregroundColor: Colors.black,
-                        //elevation: 2,
                         backgroundColor: Colors.white),
                     child: const Text(
                       "Start",
