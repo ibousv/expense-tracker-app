@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:device_sim/device_sim.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-
 import 'splash_screen/splash_screen_view.dart';
 
 void main() {
