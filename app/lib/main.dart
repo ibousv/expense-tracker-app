@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:device_sim/device_sim.dart';
 
@@ -28,35 +30,57 @@ class HomeState extends State<App> {
   }
 }
 
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
-  
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-    backgroundColor: Colors.black,
-    body: Column(
-      children: [
-        SizedBox(
-          child: Image.asset('assets/images/img1.jpg'),
-        ),
-        const SizedBox(
-          child: Text("Manage your finance easily ",
-                  style: TextStyle(fontSize: 20,color: Colors.white),
-                  textAlign: TextAlign.center,),
-          
-        ),
-        SizedBox()
-      ],
-    )
-    );
+    return Scaffold(
+        backgroundColor: Colors.black,
+        body: Column(
+          children: [
+            SizedBox(
+              child: Image.asset('assets/images/img1.jpg'),
+            ),
+            const SizedBox(
+              height: 50,
+              child: Text(
+                "Manage your finance easily ",
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(
+              height: 100,
+              child: Text(
+                "The best application for managing your finances,track all transactionss, add all transactions, add ones",
+                style: TextStyle(color: Colors.grey, fontSize: 10),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+                width: 220,
+                height: 70,
+                child: TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                        foregroundColor: Colors.black,
+                        //elevation: 2,
+                        backgroundColor: Colors.white),
+                    child: const Text(
+                      "Start",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    )))
+          ],
+        ));
   }
 }
